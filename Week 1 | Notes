@@ -1,0 +1,21 @@
+//Introduction to C++
+
+//--------------------------------------------------------------------------------------------
+
+
+Notes:
+
+
+
+
+-> C++ statements always end with a Semicolon ( ; )
+
+
+-> cout <<
+
+      - it is an output function that prints the statement.
+      
+-> cin >>       
+
+      - it is an input function that takes an input data from the user.
+
