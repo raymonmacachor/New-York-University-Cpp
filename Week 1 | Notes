@@ -1,23 +1,185 @@
 //Introduction to C++
 
 //-------------------------------------------------------------------------------------------------
+Topics Tackled
+
+-Comments
+-Input/Output
+-Variables
+
 
 
 Notes:
 
+----------------------------------------------------------------------------------------------------
+Comments
+----------------------------------------------------------------------------------------------------
 
+-> Single-line Comments
 
+      Single-line comments are created using two consecutive forward slashes. The compiler ignores any text after // on the same line.
 
--> C++ statements always end with a Semicolon ( ; )
+Example:
 
+            //Prints: Comment sample!
+            std::cout << "Comment Sample!:;
+            
+-> Multi-line Comments 
 
--> cout <<
-
-      - it is an output function that prints the statement.
+      Multi-line comments begin /* and end with */. The compiler ignores any text in between. 
       
--> cin >>       
+ Example:
+ 
+            /*
+            the function below takes in two
+            integer and returns their product.
+            */
+            
+            int multiply(int a, int b){
+            
+            return a * b;
+            
+            }
+            
+----------------------------------------------------------------------------------------------------------------
+Inpute and Output
+----------------------------------------------------------------------------------------------------------------
+-> iostream
 
-      - it is an input function that takes an input data from the user.
+      input / output stream, is part of the C++ standard library that deals with basic input and output.
+      in-order to use this function, it must be defined within the library and include it at the beginning of a 
+      program:
+      
+Example:
+
+            #include <iostream>
+            
+            
+ -> C++ Output
+ 
+            std::cout , stands for "character output", it is used together with the insertion operator << to print values
+            on the teminal:
+            
+Example:
+
+            std::cout << "Hello World!";
+            
+            std::cout << "I have " << 6 << " dogs.";
+            
+
+-> New lines
+
+      A new line can be inserted by adding \n in the text to be printed. 
+      
+      
+Example:
+
+            std::cout << "What is your name?\n";
+            std::cout << "How old are you?\n";
+            
+
+-> C++ end line
+
+      it can also be used to achieve the same result as the \n 
+      
+      
+Example:
+
+            std::cout << "What is your name?" << std::endl;
+            std::cout << "How old are you?" << std::endl;
+          
+            
+-> C++ Input
+
+      std:: cin, stands for "character input", it can be used together with the extraction operator >> to read
+      input from the user. The input value needs to be stored in a variable so we can use it.
+      
+Example:
+
+            int x;
+            std::cin >> x;
+            
+            
+Program Example:
+(Getting 1 data from the user)
+
+            int age;
+            std::cout << "Enter your Age";
+            std::cin >> age;
+            std::cout >> "You are " + age + " years old.";
+            
+
+(Getting 2 data from the user)
+
+            int x, y;
+            std:: cin >> x >> y;
+            std:: cout << "You entered " << x << " and " << y;
+            
+            
+-----------------------------------------------------------------------------------------------
+Variables
+-----------------------------------------------------------------------------------------------
+-> Variables 
+
+      a variable is a name that represents a particular piece of the computer's memory that has been set aside for storing, 
+      retrieving, and using data.
+      
+-> Declaring a variable
+
+      Declaration means to create a variable and assign a value to it. This is also called initialization. 
+      
+Example:
+
+            type name = value;
+            
+-> Defining a variable
+
+      Defining means to create a variable without assigning a value to it.
+      
+Example:
+
+            type name;
+            
+-> Assigning a variable 
+
+      To assign or change the value of an existing variable, state the name of the variable followed by the assignement
+      operator (=) and the new value.
+      
+Example:
+
+            name = new_value;
+            
+-> Declaring Multiple Variables 
+
+      Multiple variables of the same type can be declared in a single statement using a comma-separated list.
+      
+Example:
+
+            int a = 1, b = 2, c = 3;
+            
+-> Constant variable
+
+      Constant variables are variables with values that cannot be changed after initialization.
+      The purpose of a constant variable is to protect its value from being accidentally altered elsewhere in the program.
+      Constant variables are declared with the const keyword.
+      
+Example:
+
+            const double pi = 3.14;
+      
+      
+- E N D -
+            
+            
+            
+            
+            
+
+
+
+
+
+
 
 
 
