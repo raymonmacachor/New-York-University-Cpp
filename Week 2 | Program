@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+/* this program tells how many numbers of weeks on days you traveled */
+const int conv = 7;
+
+int main() {
+
+    int days;
+    int weeks, remain;
+
+
+    std::cout << "Please enter number of days you traveled:";
+
+    std::cin >> days;
+
+    weeks = days / conv;
+    remain = days % conv;
+
+    std::cout << days << " days are " << weeks << " weeks and " << remain << " days.";
+
+
+    return 0;
+}
+
