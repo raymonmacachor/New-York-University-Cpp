@@ -1,3 +1,153 @@
+Topics Tackled
+
+-Data Types
+-
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------
+Data Types
+-------------------------------------------------------------------------------------------------------------
+
+          A variable in C++ must be assigned a specific type. Type is important because it tells 
+          the compiler how to interpret the content of a variable.
+          
+          
+-> int
+
+          int stores whole numbers without decimals. An int variable requires 4 bytes of memory space 
+          and ranges from -2³¹ to 2³¹.
+          
+Example:
+
+            int moonLanding = 1969;
+            int age = 18;
+            
+            
+-> double 
+
+          double stores floating-point numbers with decimals. A double varianble requires 8 bytes memory space and is
+          sufficient for storing up to 15 decimal digits.
+          
+Example:
+
+            double pi = 3.1415;
+            double height = 1.75;
+     
+     
+-> Type Conversion
+
+          it is possible to convert int into double and vice versa. This is called a type version or a type casting.
+          
+Example:
+
+            //converting a double to an int
+            double a = 3.5;
+            int b = (int) a;     //b is now 3
+            
+            
+            //converting an int to a double
+            int c = 5;
+            double d = (double) c;     //d is now 5.0
+            
+            
+-> char 
+
+          char stores a single character surrounded by single quotes ' '. A char variable requires 1 byte of 
+          memory space.
+          
+Example:
+
+            char first_letter = 'a';
+            
+            
+-> string
+
+          std::string stores a sequence of characters surrounded by double quotes " ".
+          
+Example:
+
+            #include <string>
+            
+            std::string message = "Hello World!";
+            
+            
+-> String Methods
+
+          std::string comes with a plethora of useful methods.
+          
+          -> The + operator can be used to combine strings together. This is called concatenation:
+          
+          Example:
+          
+                    std::string first_word = "Hello";
+                    std::string second_word = "World";
+                    
+                    std::string message = first_word + " " + second_word;
+                    //message is now "Hello World"
+                    
+                    
+          -> the [] operator can be used to access the character at the specified position in the string:
+          
+          Example:
+          
+                    std::string_message = "Hello World";
+                    
+                    char letter = message[1];
+                    // letter is now 'e'
+                    
+                    
+          -> The length() function can be used to get the length of a string.
+          
+          Example:
+          
+                    std::string message = "Hello World";
+                    
+                    int message_length = message.length();
+                    //message_length is now 11
+                    
+                    
+-> bool
+
+          boold stores true or false boolean values. A bool variable requires 1 byte of memory space.
+          
+Example:
+
+            bool underaged = true;
+            bool certified = false;
+            
+            
+----------------------------------------------------------------------------------------------------------
+Operators
+----------------------------------------------------------------------------------------------------------
+
+Arithmetic Operators:
+
+
++         	Addition           	x + y     	x plus y
+
+-         	Subtraction       	x - y     	x minus y
+
+*         	Multiplication    	x * y     	x multiplied by y
+
+/         	Division          	x / y     	x divided by y
+
+%         	Modulus	            x % y     	The remainder of x divided by y
+
+++          Pre-increment     	++x       	Increment x, then return x
+
+--        	Pre-decrement     	--x       	Decrement x, then return x
+
+++        	Post-increment     	x++       	Copy x, then increment x, then return the copy
+
+--        	Post-decrement    	x--       	Copy x, then decrement x, then return the copy
+
+
+
+-> Pre vs. Post-Increment
+
 
 
 
