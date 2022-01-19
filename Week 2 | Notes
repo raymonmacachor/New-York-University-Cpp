@@ -134,9 +134,9 @@ Arithmetic Operators:
 
 /         	Division          	x / y     	x divided by y
 
-%         	Modulus	            x % y     	The remainder of x divided by y
+%         	Modulus	          x % y     	The remainder of x divided by y
 
-++          Pre-increment     	++x       	Increment x, then return x
+++                  Pre-increment     	++x       	Increment x, then return x
 
 --        	Pre-decrement     	--x       	Decrement x, then return x
 
@@ -148,6 +148,18 @@ Arithmetic Operators:
 
 -> Pre vs. Post-Increment
 
+
+          When placed before the operand, they are called pre-increment and pre decrement operators. The value in the operand is
+          incremented or decrement first, and then that operand is returned.
+          
+Example:
+
+                    int x = 10;
+                    
+                    //x is decremented to 9 first, and then assigned to y
+                    int y = --x;
+                    
+                    std::cout << x << ' ' << y;
 
 
 
