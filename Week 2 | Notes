@@ -152,7 +152,7 @@ Arithmetic Operators:
           When placed before the operand, they are called pre-increment and pre decrement operators. The value in the operand is
           incremented or decrement first, and then that operand is returned.
           
-Example:
+Example before operand:
 
                     int x = 10;
                     
