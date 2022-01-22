@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+/* finding the area of a circle */
+const double pi = 3.1415;
+
+int main() {
+
+    double area, radius;
+
+
+    std::cout << "Please enter the radius:"<<endl;
+
+    std::cin >> radius;
+
+    area = pi * (radius * radius);
+
+
+
+    std::cout << "The area of a circle with radius of " << radius << " is " << area;
+
+
+    return 0;
+}
