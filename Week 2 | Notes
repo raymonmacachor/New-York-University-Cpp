@@ -160,6 +160,17 @@ Example before operand:
                     int y = --x;
                     
                     std::cout << x << ' ' << y;
+                    
+                    
+Example after operand:
+
+                    int x = 10;
+                    
+                    // A copy of x is made first, then x is decremented to 9
+                    // Finally the value of the copy (10) is assigned to y
+                    int y = x--;
+ 
+                    std::cout << x << ' ' << y;
 
 
 
