@@ -1,0 +1,52 @@
+#include <iostream>
+
+using namespace std;
+
+/* a program that asks the user to enter a number of quarters, dimes, nickels and pennies
+   and then outputs the monetary value of the coins in the format of dollars and remaining cents.*/
+
+int main() {
+
+    int quarters, dimes, nickels, pennies;
+    int quartersToCents, dimesToCents, nickelsToCents, penniesToCents;
+
+    int dollars, centsT, cents;
+
+    cout << "Please enter the number of coins:" << endl;
+
+
+    /* Data */
+
+    cout << "# of quarters:" << endl;
+    cin >> quarters;
+
+    cout << "# of dimes:" << endl;
+    cin >> dimes;
+
+    cout << "# of nickels:" << endl;
+    cin >> nickels;
+
+    cout << "# of pennies:" << endl;
+    cin >> pennies;
+
+
+    /* Formula and conversions*/
+
+    quartersToCents = 25 * quarters;
+    dimesToCents = 10 * dimes;
+    nickelsToCents = 5 * nickels;
+    penniesToCents = 1 * pennies;
+
+    centsT = quartersToCents + dimesToCents + nickelsToCents + penniesToCents;
+
+    dollars = centsT / 100;
+    cents = centsT % 100;
+
+    cout << "The total is " << dollars << " dollars and " << cents << " cents" << endl;
+
+
+
+
+    return 0;
+
+}
