@@ -1,0 +1,37 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+
+int main() {
+
+    double weight;
+    double height;
+    double bmi;
+    double weightLb;
+    double heightIn;
+
+
+
+    cout << "Please enter weight in pounds:" << endl;
+    cin >> weightLb;
+
+
+    cout << "Please enter height in inches:" << endl;
+    cin >> heightIn;
+
+
+    weight = weightLb * 0.453592;
+    height = heightIn * 0.0254;
+
+
+    bmi = weight / (height * height);
+
+    cout << fixed << setprecision(2);
+    cout << "BMI is: " << bmi << endl;
+
+
+    return 0;
+
+}
