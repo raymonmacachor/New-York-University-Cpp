@@ -1,0 +1,100 @@
+-----------------------------------------------------------------------------------------
+BRANCHING STATEMENTS
+-----------------------------------------------------------------------------------------
+
+> Reference and Pointers <
+
+Reference
+
+        - In C++, a reference variable is an alias to an existing variable. 
+        It is declared by using an ampersand & between the reference type and the variable name:
+
+Example:
+
+                int exam_grade = 85;
+                int& score = exam_grade;
+
+Memory Address
+
+        - When not used in a declaration, the ampersand symbol & is called 
+        the address of operator and is used to access the memory address of a variable. 
+
+Example:
+
+                std::string message = "Hello World!";
+ 
+                // Print the value of message (Hello World!)
+                std::cout << message << std::endl;
+ 
+                // Print the memory address of message (0x7ffee9b21af0)
+                std::cout << &message << std::endl;
+
+
+Pointers
+
+        - A pointer in C++ is a variable that stores a memory address as its value.
+        Pointer variables are declared with an asterisk * between the data type and the variable
+        name. A pointer variable must points to a data type of the same type. For example, int* means "pointer to an int variable".
+        
+Example:
+
+                 int* age;
+                 char* initial;    
+
+
+Example 2:
+
+                std::string day = "Monday";
+                std::string* ptr = &day;
+                
+                *ptr = "Friday";
+ 
+                // Print: Friday
+                std::cout << *ptr << std::endl;
+ 
+                // Print: Friday
+                std::cout << day << std::endl;
+
+
+Dereference
+
+        - When not used in a declaration, the asterisk symbol * is called the dereference operator and 
+        is used to obtain the value pointed to by a pointer variable. 
+        This can be done by preceding the name of a pointer variable with *.
+
+
+Exampel:
+
+                
+                // Reference: print the memory address of day (0x7ffd1d8306c4)
+                std::cout << ptr << std::endl;
+ 
+                // Dereference: print the value of day (Friday)
+                std::cout << *ptr << std::endl;
+
+
+Null Pointer
+
+        - If you are unsure where to point, assign that variable to nullptr, 
+        which is a keyword that provides a typesafe pointer value representing an empty pointer.
+
+
+Example:
+
+                int* ptr = nullptr;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
