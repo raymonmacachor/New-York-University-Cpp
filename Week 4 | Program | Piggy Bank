@@ -1,0 +1,39 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+
+int main() {
+    double pesos;
+    double reais;
+    double soles;
+
+    double dollars;
+    double Cpesos;
+    double Creais;
+    double Csoles;
+
+
+
+    std:: cout << "Enter number of Colombian Pesos:" << endl;
+    std:: cin >> pesos;
+    std:: cout << "Enter number of Brazilian Reais:" << endl;
+    std:: cin >> reais;
+    std:: cout << "Enter number of Peruvian Soles:" << endl;
+    std:: cin >> soles;
+
+    //conversion
+    Cpesos = pesos / 3944.18;
+    Creais = reais / 5.28;
+    Csoles = soles / 3.85;
+
+    dollars = = Cpesos + Creais + Csoles;
+
+    std::cout << "US Dollars = $ " << dollars;
+
+
+
+    return 0;
+
+}
