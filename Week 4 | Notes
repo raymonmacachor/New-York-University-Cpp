@@ -10,7 +10,7 @@ Reference
         It is declared by using an ampersand & between the reference type and the variable name:
 
 Example:
-
+                
                 int exam_grade = 85;
                 int& score = exam_grade;
 
@@ -82,6 +82,281 @@ Null Pointer
 Example:
 
                 int* ptr = nullptr;
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+CONDITIONAL STATEMENTS
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Conditional Statement
+
+        - A sequence of code to execute based on the value of the given boolean expressions. The most basic form of 
+        conditional statements is the if-else statement.
+        
+
+if Statements
+
+        - is used to test an expression for truth. If the condition evaluates to true, then the code within the if block is executed
+        ;otherwise, it will be skipped:
+        
+        
+Example:
+
+                if (condition) {
+                 // Code to run if the condition is true
+                }
+
+
+else Statemets
+
+        - An else statement can be added after an if statement. Opposite to if, the code within the else block will only be executed 
+        if the condition is false:
+
+
+Example:
+
+                if (condition) {
+                 // Code to run if condition is true
+                } 
+                else {
+                 // Code to run if condition is false
+                }
+
+
+else if statements
+
+        - One or more else if statements can be added in-between the if and else clauses to specify new conditions.
+        The code within the else if block will only execute if the previous conditions evaluate to false:
+        
+        
+Example:
+
+                if (condition1) {
+                 // Code to run if condition1 is true
+                } 
+                else if (condition2) {
+                  // Code to run if condition1 is false and condition2 is true
+                }
+                else {
+                  // Code to run if both condition1 and condition2 are false
+                }
+
+
+Shorthand if-else
+
+        - It is possible to condense an if-else expression into a single statement using the following syntax:
+        
+        variable = (condition) ? condition_is_true : condition_is_false;
+        
+        
+Example:
+
+                Instead of writing this:
+            
+                int time = 10;
+                std::string greeting;
+                if (time < 12) {
+                 greeting = "Good morning";
+                }
+                else {
+                greeting = "Good afternoon";
+                }
+                // greeting becomes "Good morning"
+
+
+                You can write this using shorthand if else:
+                
+                int time = 10;
+                std::string greeting = (time < 12) ? "Good morning" : "Good afternoon";
+                // greeting becomes "Good morning"
+
+
+
+Omitting Brackets around single conditional statements
+
+        -Curly brackets { } may be omitted if there is only a single statement inside an if, else if, or else block. 
+        For example, the two code snippets below are identical in functionality:
+
+
+Example:
+
+
+                if (number == 7)
+                std::cout << "Lucky!\n";
+                
+                
+                if (number == 7) {
+                std::cout << "Lucky!\n";
+                }
+
+---------------------------------------------------------------------------------------------------------------------
+SWITCH STATEMENTS
+--------------------------------------------------------------------------------------------------------------------
+
+Switch Statement
+
+        - Is a type of conditional statement in C++ just like if and else. A switch statement provides a means of 
+        checking an expression against various cases. If there is a match, the code within the block starts to execute. 
+        
+        
+Swtitch Syntax
+
+
+Switch
+        - The switch keyboard initiates the switch statement, It is followed by an expression to be evaluated inside the
+        prenthesis ().
+        
+Case    
+
+        - The case keyword is used to check whether the expression matches the specified value. If it does, then the code in
+        that case block would run:
+
+Break 
+
+        - The break keyword signals the compiler to jump out of a case.
+        
+Default
+
+        - The default keyword is used to specify a code block to be run if none of the cases are true. 
+        
+Example:
+
+                switch (grade) {
+                 case 9:
+                    std::cout << "Freshman\n";
+                    break;
+                 case 10:
+                    std::cout << "Sophomore\n";
+                    break;
+                 case 11:
+                    std::cout << "Junior\n";
+                    break;
+                 case 12:
+                    std::cout << "Senior\n";
+                    break;
+                 default:
+                    std::cout << "Invalid\n";
+                    break;
+                }
+
+-------------------------------------------------------------------------------------------------------------------
+LOOPS
+-------------------------------------------------------------------------------------------------------------------
+
+loop 
+
+        - Is a control flow construct that repeatedly executes some code. Loops are great for tasks that have to repeat
+        multiple times in a row. 
+        
+while loops
+
+        - The while loop repeats a block of code as long as the given boolean condition is true.
+        
+Example:
+
+                int count = 1;
+                while (count <= 5) {
+                std::cout << count;
+                 count++;
+                }
+
+Output:
+
+                13245
+      
+      
+Counter Variable
+
+        - A counter or iterator is a variable that is responsible for iterating (or repeating) 
+        a loop and eventually causing it to stop.
+
+Infinite Loops
+
+        - If the expression of a while loop always evaluates to true, the loop will keep repeating forever. 
+        This is called an infinite loop.
+
+
+Example:
+
+                int alarm = 9;
+                while (alarm > 8) {
+                std::cout << "ding\n";
+                }
+
+do-while Loops
+
+        - The do-while loop is very similar to a while loop, but will always execute at least once, even
+        if the condition is initially false:
+       
+       
+Example:
+
+                int price = 300;
+                do {
+                 std::cout << "Too expensive!";
+                } while (price > 500);
+
+for Loops
+
+        - The for loop should be implemented when the programmer knows exactly how many times a block of code needs to be repeated.
+        
+Example:
+
+                for (int i = 1; i <= 5; i++) {
+                  std::cout << i;
+                }
+
+
+The for loop statement is made up of three parts, each separated by ;. Using the above program as an example:
+
+> The initialization of a counter variable: int i = 1. This is only executed once before the execution of the code block.
+
+> The condition for executing the code block as long as it’s true: i <= 5.
+
+> The increment/decrement of the counter variable: i++. This is executed after every iteration of the loop.
+
+
+
+For-each Loops
+
+        - The for-each loop is especially useful for iterating through list-like structures such as arrays or std::vector. 
+        Although regular for loops are perfectly capable of this task, for-each loops provides a more convenient syntax:
+
+Example:
+
+                int fibonacci[5] = {0, 1, 1, 2, 3};
+                for (int number : fibonacci) {
+                  std::cout << number;
+                }
+
+Output:
+
+                01123
+
+This for-each loop iterates through an array called fibonacci using the counter variable number.
+
+
+
+The auto Keyword
+
+        - When iterating through an array using the for-each loop, the counter variable may be declared using the auto keyword.
+        auto lets C++ deduce the type of the variable based on the type of the list it belongs to.
+        
+Example:
+
+                int fibonacci[5] = {0, 1, 1, 2, 3};
+                for (auto number : fibonacci) {
+                  std::cout << number;
+                }
+
+
+
+
+
+
+
+
+
+
 
 
 
