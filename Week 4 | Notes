@@ -348,20 +348,59 @@ Example:
                   std::cout << number;
                 }
 
+---------------------------------------------------------------------------------------------------------
+BREAK AND CONTINUE
+---------------------------------------------------------------------------------------------------------
+
+Break
+
+        - The break keyword can be used to jump out of a loop. When the break statement is executed, 
+        the loop immediately ends and any code below it will not run:
 
 
+Example:
+
+                for (int i = 0; i < 10; i++) {
+                  if (i == 4) {
+                   break;
+                 }
+                  std::cout << i;
+                 }
 
 
+Example of break in switch statements:
+
+                char symbol;
+                switch (symbol) {
+                case 'F':
+                  std::cout << "Fahrenheit";
+                 break;
+                  case 'C':
+                  std::cout << "Celsius";
+                    break;
+                }
+
+Break vs. return 
+
+        > A break statement is used to terminate a switch or loop, and code execution will continue to the line after the switch or loop.
+
+        > A return statement terminates the entire function and resumes code execution at the point where the function was called.
+        Unlike break, return also returns something back to the caller.
 
 
+Continue
 
+        - continue keyword can be placed inside a loop to skip over one iteration of the loop. 
+        If continue is executed, the current loop iteration will immediately end, and the next iteration will begin.
 
+Example:
 
-
-
-
-
-
+              for (int i = 0; i < 10; i++) {
+                  if (i == 4) {
+                   continue;
+                 }
+                  std::cout << i;
+                 }  
 
 
 
