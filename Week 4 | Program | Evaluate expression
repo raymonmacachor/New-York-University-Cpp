@@ -1,0 +1,54 @@
+//Evaluate expression   
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+
+int main() {
+    double arg1;
+    double arg2;
+    double exp;
+    char op;
+
+    std::cout << "Please enter an expression of the form argument 1 | operator | argument 2 " << endl;
+    std::cin >> arg1 >> op >> arg2;
+
+    switch (op) {
+
+        case '+':
+            exp = arg1 + arg2;
+            std::cout << exp << endl;
+            break;
+
+        case '-':
+            exp = arg1 - arg2;
+            std::cout << exp << endl;
+            break;
+
+        case '*':
+            exp = arg1 * arg2;
+            std::cout << exp << endl;
+            break;
+
+        case '/':
+            if (arg2 != 0) {
+                exp = arg1 / arg2;
+                std::cout << exp << endl;
+
+            } else {
+                std::cout << "Illegal Expression!" << endl;
+            }
+            break;
+
+
+        default:
+            std::cout << "Please enter a valid format.";
+    }
+
+
+
+    return 0;
+
+
+}
