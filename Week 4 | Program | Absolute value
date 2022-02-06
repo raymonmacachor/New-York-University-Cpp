@@ -1,0 +1,36 @@
+#this program check if the number is an absolute value
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+
+int main() {
+    int integer;
+
+
+    std::cout << "Please enter an integer: " << endl;
+    std::cin >> integer;
+
+    if (integer > 0){
+
+        std::cout << "The integer of " << integer << " is " << integer << endl;
+
+    }else if (integer < 0) {
+
+        std::cout << "The integer of " << integer << " is " << integer * -1 << endl;
+
+    }else {
+
+        std::cout << "Please enter an integer";
+
+    }
+
+
+    return 0;
+
+
+
+
+}
