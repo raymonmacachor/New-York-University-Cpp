@@ -1,0 +1,31 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+
+int main() {
+    int integer;
+    int remainder;
+
+
+    std::cout << "Please enter an integer: " << endl;
+    std::cin >> integer;
+
+    remainder = integer % 2;
+
+    if (remainder == 0){
+
+        std::cout << "The integer is Even" << endl;
+    }else {
+
+        std::cout << "The integer is Odd" << endl;
+    }
+
+
+    return 0;
+
+
+
+
+}
