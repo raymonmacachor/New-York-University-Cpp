@@ -1,0 +1,42 @@
+//classifying a character using ASCII table
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+
+int main() {
+    char userCh;
+
+    std::cout << "Please enter a character: " << endl;
+    std:: cin >> userCh;
+
+    if (userCh >= 'a' && userCh <= 'z'){
+
+        std::cout << userCh << " is a lowercase character." << endl;
+
+    }else if (userCh >= 'A' && userCh <= 'Z'){
+
+        std::cout << userCh << " is an uppercase character." << endl;
+
+    }else if (userCh >= '!' && userCh <= '/'){
+
+        std::cout << userCh << " is not an alpha-numeric character." << endl;
+
+    }else if (userCh >= '0' && userCh <= '9'){
+
+        std::cout << userCh << " is a Digit." << endl;
+
+    }else{
+
+        std::cout << "Please enter a character.";
+
+    }
+
+
+    return 0;
+
+
+
+
+}
