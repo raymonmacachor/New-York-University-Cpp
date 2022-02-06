@@ -1,0 +1,44 @@
+// 24 hour -> 12 hour time format 
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+
+int main() {
+
+    int userTimeH;
+    int userTimeM;
+    int convert;
+    char temp;
+
+    std::cout << "Please enter a time in a 24-hour format" << endl;
+
+    std::cin >> userTimeH >> temp >> userTimeM;
+
+
+    if (userTimeH == 0 && userTimeM < 60){
+
+        std::cout << userTimeH << ":" <<userTimeM << " is " << "12" << ":" << userTimeM << " AM" << endl;
+
+    }else if (userTimeH > 12 && userTimeM < 60){
+
+        convert = userTimeH - 12;
+
+        std::cout << userTimeH << ":" <<userTimeM << " is " << convert << ":" << userTimeM << " PM" << endl;
+
+    }else if (userTimeH < 12 && userTimeM < 60){
+
+        std::cout << userTimeH << ":" <<userTimeM << " is " << userTimeH << ":" << userTimeM << " AM" << endl;
+
+    }else {
+
+        std::cout << "Please enter a valid 24-hour time format" << endl;
+
+    }
+
+
+    return 0;
+
+
+}
