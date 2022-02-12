@@ -1,0 +1,30 @@
+//Grade Classification Lab
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+
+int main() {
+    int grade1;
+    int grade2;
+
+
+    std::cout << "Please enter 2 grades, separated by a space: ";
+    std::cin >> grade1;
+    std::cin >> grade2;
+
+    if (grade1 >= 95 && grade2 >= 95){
+
+        std::cout << "Student Graduated with Honors:)" <<endl;
+
+    }else if (grade1 < 60 && grade2 < 60) {
+
+        std::cout << "Student Failed:(" << endl;
+
+    }else{
+
+        std::cout << "Student Graduated!" <<endl;
+    }
+
+}
