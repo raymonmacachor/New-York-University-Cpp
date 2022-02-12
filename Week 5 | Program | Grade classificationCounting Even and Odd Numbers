@@ -1,0 +1,36 @@
+//Counting Even and Odd Numbers Lab
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+
+int main() {
+    int num1, num2, num3, num4;
+
+    int rem;
+
+    std::cout << "Please enter 4 positive integers, separated by a space: ";
+    std::cin >> num1 >> num2 >> num3 >> num4;
+
+    num1 = num1 % 2;
+    num2 = num2 % 2;
+    num3 = num3 % 2;
+    num4 = num4 % 2;
+
+    rem = num1 + num2 + num3 + num4;
+
+    if (rem < 2){
+
+        std::cout << "more evens" << endl;
+    } else if (rem > 2){
+
+        std::cout << "more odds" << endl;
+    }else {
+        std::cout << "same number of evens and odds" << endl;
+    }
+
+
+
+
+}
