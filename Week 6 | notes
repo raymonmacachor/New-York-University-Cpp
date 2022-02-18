@@ -1,0 +1,228 @@
+------------------------------------------------------------------------------------------------------
+Introduction to Functions
+------------------------------------------------------------------------------------------------------
+
+Creating a function
+
+        - While C++ provides many helpful built-in functions, it's never a bad idea to create you own
+        user-definced functions to tackle specific tasks. A function is made up of two components:
+        
+        Declaration
+                
+                - The function's name, return type, and any parameters. 
+                
+        Definition
+        
+                - The body of the function containing the code to be executed. 
+                
+        
+Example:
+
+                void doSomething(){
+                
+                        std:cout << "Functions are great!\n";
+                
+                }
+                
+
+        Here is a breakdown of the funtion:
+        
+        > doSomething() - is the name of the function.
+        
+        > void - means that the function does not have a return value. 
+        
+        > () - is the parameter list. Since it's empty, this function takes no input parameters. 
+        
+        > {} - all the codes place within the brackets is the body of the function. 
+        
+
+--------------------------------------------------------------------------------------------------------
+Calling a function
+--------------------------------------------------------------------------------------------------------
+
+To use a function, it needs to be "called" by specifying the function name followed by a pair of parentheses()
+and a semicolon ;:
+
+Example:
+
+                // Create a function
+                void doSomething() {
+                  std::cout << "Functions are great!\n";
+                }
+ 
+                int main() {
+                  // Call the function
+                  doSomething();
+                  doSomething();    
+                  doSomething();    
+                }
+        
+--------------------------------------------------------------------------------------------------------
+Return Type and Value
+--------------------------------------------------------------------------------------------------------
+
+The programmer can choose whether a function returns something back to the caller. A function that doesn't return a value should be
+declared as a void function. 
+
+        A function that returns a value need to have two things:
+        
+        Return type
+        
+                - The type defined before the function’s name. Just like variables, functions can take on 
+                data types like int, double, and bool.
+
+        Return value
+        
+                - The specific value returned from the function using the return keyword. The type of this
+                return value must match the function’s return type.
+                
+                
+Example:
+
+                double valueOfPi() {
+                  return 3.1415;
+                }
+ 
+                int main() {
+                 double pi = valueOfPi();
+                 std::cout << pi;  // Output: 3.1415
+                }
+
+------------------------------------------------------------------------------------------------------------
+Function Scope
+------------------------------------------------------------------------------------------------------------
+
+Scope defines the region of code that can access or view a given variable. Function scope is no different from other types of
+scopes; variables declared inside a function are only accessible inside that function. If we try to reference a function
+variable outside the funtion scope, the C++ compiler will output an error message. 
+
+Example:
+
+               int lucky() {
+                  int lucky_number = 7;
+                  return lucky_number;
+                }
+ 
+                int main() {
+                  //Error: variable lucky_number is not in the scope of main()
+                  std::cout << lucky_number; 
+ 
+                  return 0;
+                } 
+
+
+--------------------------------------------------------------------------------------------------------------
+Function Parameters
+---------------------------------------------------------------------------------------------------------------
+
+In C++, Function parameters are variables that act as placeholders for input values passed to a function. They act as variables inside a function. 
+In this article, we will cover the following topics:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
