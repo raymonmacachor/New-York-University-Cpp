@@ -115,44 +115,212 @@ Example:
 Function Parameters
 ---------------------------------------------------------------------------------------------------------------
 
-In C++, Function parameters are variables that act as placeholders for input values passed to a function. They act as variables inside a function. 
-In this article, we will cover the following topics:
+In C++, Function parameters are variables that act as placeholders for input values passed to a function. 
+They act as variables inside a function. 
+
+
+--------------------------------------------------------------------------------
+Parameters and Arguments 
+--------------------------------------------------------------------------------
+
+Parameters
+
+        - Function parameters are defined in the function declaration and placed inside the parentheses ()
+        after the function name. Each parameter must be defined with a name and a data type, just like regular variables. 
+        
+        
+Example:
+
+                 int feetToInches(int ft) {
+                  return ft * 12;
+                 }
+
+Arguments 
+
+        - A function argument is a value that is passed to the function when performing a function call. 
+        Arguments must be the same data type as the parameters. 
+        
+        
+Example:
+
+                int feetToInches(int ft) {
+                  return ft * 12;
+                }
+ 
+                int main() {
+                  std::cout << feetToInches(6);    // Prints: 72
+                }
+
+
+--------------------------------------------------------------------------------------------------------
+Multiple Parameters
+--------------------------------------------------------------------------------------------------------
+
+Functions can have more than one parameters. Multiple parameters in a function declaration need to be comma-separated:
+
+Example:
+
+                double totalPrice(int items, double price, bool discount) {
+                  if (discount) {
+                    return 0.8 * items * price;
+                  }
+                  else {
+                    return items * price;
+                  }
+                }
+
+        
+        When calling a function with multiple parameters, keep two things in mind:
+        
+                > The function call must include the same number of arguments as there are parameters
+                
+                > The corresponding arguments must be passed in the same order. 
+
+
+        For example, a call to the totalPrice() function would look like this:
+        
+                totalPrice(10, 4.99, true);
 
 
 
+-----------------------------------------------------------------------------------------------------
+Default Parameters
+-----------------------------------------------------------------------------------------------------
+
+Default parameters make it possible to call a function without including all the arguments. Any argument absent from the
+function call is replaced with the dafault value associated with that parameter:
+
+
+Example:
+
+                void message(std::string language = "C++") {
+                  std::cout << "I like to code with " << language << "\n";
+                }
+ 
+                int main() {
+                  // Function call without an argument
+                  message();    // Output: I like to code with C++
+ 
+                  // Function call with an argument
+                  message("Java");    // Output: I like to code with Java
+                }
+
+
+        When the message() function is called without any arguments, the language parameter will take on the default value "C++".
+        
+
+--------------------------------------------------------------------------------------------------------
+Pass by Reference
+--------------------------------------------------------------------------------------------------------
+
+Pass by reference allows a function to modify the value of its argument variables.
+Use the reference operator "&" to indicate that a parameter is passed by reference. 
+
+
+Example:
+
+                void swap(int &i, int &j) {
+                  int temp = i;
+                  i = j;
+                  j = temp;
+                }
+ 
+                int main() {
+                  int first = 10;
+                  int second = 20;
+ 
+                 std::cout << "Before swap: " << first << " " << second << "\n";
+ 
+                  // Call the function and swap the values of first and second
+                  swap(first, second);
+                 
+                  std::cout << "After swap: " << first << " " << second << "\n";
+                }
+
+
+swap()
+
+        - is a function that swap the values of the first and second.
+
+
+------------------------------------------------------------------------------------------
+Function Overloading
+------------------------------------------------------------------------------------------
+
+In C++, function overloading allows multiple functions to have the same name as long as they differ in their parameters.
+It enables functions to handle different types/numbers of inputs.
+
+
+Function Overloading
+
+In the following example, the add() function is overloaded to add numbers of different types: 
+
+Example:
+
+                // Adds two int values
+                int add(int a, int b) {
+                  return a + b;
+                }
+ 
+                // Adds two double values
+                double add(double a, double b) {
+                  return a + b;
+                }
 
 
 
+Overload Differentiation
+
+        In order to differentiate overload functions, at least one of the following properties must be true:
+        
+                > Each function has different types of parameters.
+                
+                > Each function has a different number of parameters. 
+                
+                
+        For example, the add() function in the previous example can be overloaded once more by adding an extra parameter:
+        
+        
+Example: 
+
+                // Adds two int values
+                int add(int a, int b) {
+                  return a + b;
+                }
+                 
+                // Adds three int values
+                int add(int a, int b, int c) {
+                  return a + b + c;
+                }
 
 
 
+Overload Resolution
+
+When calling an overloaded function, the compiler will attempt to match the function call to the correct overload 
+based on the type and the number of arguments passed in the function call. This is known as overload resolution:        
 
 
+Example:
+
+                int add(int a, int b) {
+                  return a + b;
+                }
+ 
+                double add(double a, double b) {
+                  return a + b;
+                }
+                 
+                int main() {
+                  std::cout << add(3, 2);     // Calls add(int, int)
+                  std::cout << "\n";
+                  std::cout << add(5.3, 1.4);     // Calls add(double, double)
+                }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---------------------------------------------------------------------------------------------------------
+Command line Arguments
+---------------------------------------------------------------------------------------------------------
 
 
 
