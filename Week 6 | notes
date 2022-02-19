@@ -322,35 +322,121 @@ Example:
 Command line Arguments
 ---------------------------------------------------------------------------------------------------------
 
+Command line arguments are optional arguments passed by the operating system to the main() function of a C++ program.
+Unlike normal function arguments, which are passed during the run time of a program, command line arguments are passed when 
+the program is executed.
+
+Passing Command line Arguments
+
+        - Command line arguments are passed at the point of execution. Supose there is a C++ file called greeting.cpp in the 
+        current directory. It can be compiled with the following:
+        
+Example:
+
+                g++ greeting.cpp -o greeting
+                
+                
+        - The compiler has translated the program into an executable called greeting. Normally, we can run it with:
+   
+   
+Example:
+
+                ./greeting
+
+
+        - The executable name itself (./greeting) is actually the first command line argument.
+        
+        - In order to pass additional command line arguments, simply list the arguments after the executable name. If
+        multiple command line arguments are passed, they need to be separated by spaces:
+        
+        
+Example:
+
+                ./greeting Code cademy
+
+
+------------------------------------------------------------------------------------------------------------------
+Using Command Line Argumets
+-------------------------------------------------------------------------------------------------------------------
+
+        Up until now, the main() function has been defined without parameters 
+
+Example:
+
+                int main()
+                
+                
+        In order to access command line arguments, the new form of main() takes two arguments:
+        
+Example:
+
+                int main(int argc, char *argv[])
+                
+                                or
+                                
+                int main(int argc, char **argv)
 
 
 
+        > argc (argument count): is an int parameter containing the number of command line arguments passed to the program. 
+        The value of argc is at least 1 because the name of the executable is treated as an argument. 
+        
+        > argv (argument vector): is an array parameter containing the values of command line arguments. The range of argv spans
+        from 0 to argc - 1. 
+        
+        
+
+        The following example implements the greeting program to print the values  of all the command line arguments:
+        
+Example:
+
+
+                #include <iostream>
+ 
+                int main(int argc, char* argv[]) {
+                  for(int i = 0; i < argc; i++) {
+                    std::cout << "arg " << i << ": " << argv[i] << "\n";
+                  }
+                  return 0;
+                }
+
+        
+When this program is executed with:
+        
+   
+Example: 
+
+                ./greeting Code cademy
 
 
 
+Special Characters
+
+        - Command line arguments are usually separated by spaces. If an argument itself contains spaces, it needs to be enclosed in
+        double-quotes " " to be considered one single string. 
+        
+
+Example:
+
+                ./greeting "Code cademy"
+                
+                
+        will produce the following output:
+        
+                arg 0: ./greeting
+                
+                arg1 : Code cademy
+                
+        If an argument contains literal double quotes, the double quotes need to be labled with backslash \:
+        
+                ./greeting \"Code cademy\"
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        this will print:
+        
+                arg 0: ./greeting
+                arg 1: "Code
+                arg 2: cademy"
 
 
 
