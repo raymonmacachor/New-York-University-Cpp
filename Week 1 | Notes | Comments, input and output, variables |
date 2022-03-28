@@ -80,7 +80,7 @@ Example:
 
 -> C++ end line
 
-      it can also be used to achieve the same result as the \n 
+      it can also be used to achieve the same result as the std::endl . 
       
       
 Example:
