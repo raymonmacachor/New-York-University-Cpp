@@ -1,0 +1,93 @@
+--------------------------------------------------
+Run C++ program using an IDE and the command line
+--------------------------------------------------
+
+-> Once you are at the desired directory, use g++ and the filename to compile:
+
+Example on terminal:
+
+                g++ ExampleProgram.cpp -o ExampleProgram
+
+        Parts:
+        
+                g++                -> command
+                
+                ExampleProgram.cpp -> File name of the cpp program
+                
+                -o                 -> Ommit
+                
+                ExampleProgram     -> Name of the program
+
+
+--------------
+Running C++
+--------------
+
+-> Once you have your executable file, use ./ and the name of the executable to run it
+
+Example:
+
+                ./ExampleProgram
+
+----------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
