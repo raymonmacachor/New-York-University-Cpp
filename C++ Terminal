@@ -1,0 +1,161 @@
+------------------
+Command Line
+------------------
+-> The command line is a text interface for your computer. It's a program that takes in commands and
+passes them on the computer's operating system to run.
+
+
+
+-------
+ls
+-------
+-> The command line looks at the directory you are in , and then "list" all the files and directories
+inside of it. 
+
+
+-------
+pwd
+-------
+-> pwd command which stands for print working directory. It outputs the name of the directory you are currently
+in, called the working directory.
+
+
+------
+cd
+------
+-> cd stands for change directory. Just as you would click on a folder in windows explorer or finder, cd switches
+you into the directory you specify. 
+
+Example:
+
+                cd 2015                 -> to change directory into a specific folder one step up
+                
+                cd jan/memory           -> to change the directory consecutively using the /
+                
+                cd ..                   -> to move back up
+                
+                cd ../feb               -> to move back to a specific folder or directory 
+                
+                cd ../..                -> to move back up consecutively using /
+                
+                
+-------
+mkdir
+-------
+-> The mkdir command stands for "make directory". It takes in a directory name as an argument and then creates
+a new directory in the current working directory.
+
+
+Example:
+
+                mkdir media             -> create a new directory
+                mkdir medi/tv
+
+
+-------
+touch
+-------
+-> The touch command creates a new file inside the working directory. It takes in a filename
+as an argument and then creates an empty file with that name in the current working directory
+
+Example:
+
+                touch keyboard.txt      -> cerates a new file inside the directory
+
+
+----------------
+Helper Commands
+----------------
+Commands
+
+        clear -> is used to clear your terminal, which is useful when it's full of previous commands and outputs.
+        
+        tab   -> can be used to autocomplete your command, When you are typing the name of an existing file or directory,
+        you can use tab to finish the rest of the name
+        
+        up and down arrows -> can be used to cycle through your previous commands or through the recent one.
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
