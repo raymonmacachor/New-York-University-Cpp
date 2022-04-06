@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int year;
+  int cond1; 
+  int cond2;
+  int cond3;
+
+
+  std::cout << "Enter a year: ";
+  std::cin >> year;
+
+  if (year < 9999 || year < 1000){
+
+    if(year % 4 == 0 || year % 100 == 0 && year % 400 == 0 || year % 400 == 0){
+
+      std::cout << year << " is a leap year.\n";
+    }
+    else{
+
+      std::cout << year << " is not a leap year.\n";
+
+    }
+
+   
+    } 
+  else{
+    
+    std::cout << "The year is invalid.\n";
+
+  }
+  
+}
