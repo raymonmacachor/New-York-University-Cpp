@@ -1,0 +1,64 @@
+#include <iostream>
+#include <cstdlib>
+
+// Magic 8-Ball program
+
+using namespace std;
+
+int main(){
+
+  srand(time(NULL));
+
+  int random = std::rand() % 10;
+
+  std::cout << "MAGIC 8-BALL: \n";
+  std::cout << " \n";
+
+
+  switch (random){
+    
+
+    case 1:
+      std::cout << "It is decidedly so.\n";
+      break;
+
+    case 2:
+      std::cout << "Outlook good.\n";
+      break;
+
+    case 3:
+      std::cout << "Outlook not so good.\n";
+      break;
+
+    case 4:
+      std::cout << "Better not tell you now.\n";
+      break;
+
+    case 5:
+      std::cout << "Signs point to yes.\n";
+      break;
+
+    case 6:
+      std::cout << "Yes.\n";
+      break;
+
+    case 7:
+      std::cout << "Cannot predict now.\n";
+      break;
+
+    case 8:
+      std::cout << "Very doubtful.\n";
+      break;
+
+    case 9:
+      std::cout << "Without a doubt.\n";
+      break;
+
+
+    default:
+      std::cout << "Concentrate and ask again.\n";
+      break;
+  }
+
+
+}
