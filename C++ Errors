@@ -1,0 +1,144 @@
+--------------------------------
+Compile-time Errors
+--------------------------------
+Two types of compile-time errors:
+
+        Syntax Errors
+        
+                -> Errors that occur when we violate the rules of C++ syntax. 
+                
+        Type Errors
+        
+                -> Errros that occur when there are mismatch between the types we declared. 
+
+
+                        -> Most common errors here are the semi-colon <-
+
+-------------------
+Link-time Errors
+-------------------
+-> Link-time errors are found by the linker when it is trying to combine object files into an executable file.
+
+               ->  Most common errors here are the main(). <-
+
+
+
+--------------------
+Run-time Errors 
+--------------------
+-> Run-time errors occur when a program with no compile-time errors and link-time errors asks the computer to do
+   something that the computer is unable to reliably do. 
+   
+                
+                        -> Errors usually found in the operations such as division, multiplication, etc.. <-
+
+
+------------------
+Logic Errors
+------------------
+-> Logical errors are a type of error which provide incorrect output, but appears to be error-free.
+
+
+                        -> Usually found in the logic of the code. <-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
