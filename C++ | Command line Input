@@ -1,0 +1,20 @@
+These are steps you can follow to achieve command line execution of your program.
+
+Source code:
+
+1. For the preprocessor directive: Include the string header file, using: #include string (Don't forget the angle brackets)
+2. For your main function prototype: Add the argument count and argument vector parameters, using: int main(int argc, char* argv[])
+Next, you will declare two variables, one string variable to accept the input as an argument from the command line, and one int variable, to convert the string to integer, in order to do your calculation.
+
+1. For accepting the year as a command line input, use: string variable_name1=argv[1]; e.g. string year1=argv[1];
+2. For conversion to int, use the stoi() function: int variable_name2=stoi(variable_name1) ; e.g. int year=stoi(year1);
+Next, add the codes for your leap year/non-leap year calculations.
+
+Compiling and running the program (from the Command line):
+
+NB: I'm using a Mac, therefore the command I'm using to run the program is for 'Terminal', Windows will require a slightly different command.
+
+1. To compile the program, change to the source directory (where you saved the source file (.cpp) file)
+2. Compile command: g++ -o executable_file_name source_file_name e.g. going by the lab requirements, assume the chosen executable file name is 'isleapyearc' and the source file name is 'isleapyearc.cpp', use the following command: g++ -o isleapyearc isleapyearc.cpp
+3. Run the program, using ./isleapyearc year For example ./isleapyearc 1896
+You will get your output.
