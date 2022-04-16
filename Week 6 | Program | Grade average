@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+int main () {
+
+    int students;
+    int numStudents = 0;
+    double gradesf = 0;
+    double grades;
+    double avr;
+
+    std::cout << "Please enter the number of students in the class:" << endl;
+    std::cin >> students;
+
+    std::cout << "Enter the students' grades (separated by a space): \n";
+
+    while (students != numStudents) {
+
+        std::cin >> grades;
+
+        gradesf += grades;
+
+        numStudents++;
+
+        if (students == numStudents){
+            avr = gradesf / students;
+
+            std::cout << "The class average is " << avr;
+        }
+    }
+
+
+}
