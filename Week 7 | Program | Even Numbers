@@ -1,0 +1,41 @@
+#include <iostream>
+
+int length(int n);
+
+using namespace std;
+
+int main(){
+    int n;
+    int even = 0;
+
+    std::cout << "Please enter a positive integer: ";
+    std::cin >> n;
+
+    if (n > 0){
+
+        for (int i = 0; i < n; i++){
+
+            if (i % 2 == 0){
+
+                even = even + 2;
+
+                std::cout << even << "\n";
+
+
+            }else {
+
+                even = even + 2;
+
+                std::cout << even << "\n";
+            }
+        }
+
+    }else{
+        std::cout << "Invalid number";
+    }
+
+
+
+    return 0;
+
+    }
