@@ -1,0 +1,32 @@
+#include <iostream>
+#include <vector>
+
+int main(){
+
+  double sum = 0;
+  double product = 1;
+
+  std::vector<int> number = {3, 8, 5, 7, 6, 8};
+
+  for (int i = 0; i < number.size(); i++){
+
+    if(number[i] % 2 == 0 ){
+
+      sum = sum + number[i];
+
+    }else{
+
+      product = product * number[i];
+
+    }
+
+
+
+  }
+
+ std::cout << "Sum of even numbers is " << sum << "\n";
+ std::cout << "Product of odd numbers is " << product;
+
+
+
+}
