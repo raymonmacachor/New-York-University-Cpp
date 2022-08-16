@@ -4,26 +4,207 @@ Vector
 
         - A vector is a sequence of elements that you can access by index. 
         
+
+To add a vector line of code we must initiate the vector first using include.
+
+
+        Example:
+        
+                        
+                        #include <vector>
+                        
+                        std::vector<type> name;
+                        
+                        
+We can also initialize a vector, giving it values, as we are creating it in the same line. 
+
+
+        Example:
+                        
+                
+                        #include <iostream>
+                        #include <vector>
+                        
+                        
+
+                        std::vector <double> coordinates = {42.16846, -73.16184};
+                        
+                        
+        Here, we are storing a latitude and a longitide. 
+        So it would look something like this:
+        
+        
+                        42.16846  |  -73.16184
         
 
 
+We can also initialize our vector using presizing, or setting the size. 
+
+
+        Example:
+        
+                        #include <iostream>
+                        #include <vector>
+                        
+                        std::vector <double> location(2);
+                        
+
+
+------------------------
+Index
+------------------------
+
+                        
+We can also access the value inside a variable using it's index.
+
+Index
+
+        - An index referes to an element's position within an ordered list. Vectors are 0- indexed, meaning
+        the first element has index 0, the second index 1, and so on.
+        
+        
+        Example:
+        
+        
+                        #include <iostream>
+                        #include <vector>
+                        
+                        int main(){
+                        
+                        std::vector <double> countdown {5, 4, 3, 2, 1, 0};
+                        
+                        std::cout << countdown[0];
+                        std::cout << countdown[1];
+                        std::cout << countdown[2];
+                        std::cout << countdown[3];
+                        std::cout << countdown[4];
+
+
+                        }
+                        
+                        
+--------------------------------------
+Adding and Removing Elements
+--------------------------------------
+
+------------
+.push_back()
+------------
+                - To add a new element to the "back", or end of the vector, we can use the .push_back() function.
+                
+                
+        Example:
+        
+                        
+                        std::vector<std::string> dna = {"ATG", "ACG"};
+                        
+                        
+                It would look like:
+                
+                        ATG | ACG
+                        
+                
+                We can add elements using .push_back()
+                
+                        dna.push_back("GTG");
+                        dna.push_back("CTG");
+                        
+                
+                So now dna would look like:
+                
+                        ATG | ACG | GTG | CTG
+                        
+---------------                        
+.pop_back()
+---------------
+
+                        
+                - You can also remove elements from the "back" of the vector using .pop_back()
+                
+        
+        Example:
+        
+                        dna.pop_back();
 
 
 
+                The vector would now look like:
+                
+                        ATG | ACG | GTG
 
 
+---------------------
+.size()
+---------------------
 
 
+                - The <std::vector> not only stores the elements; it also stores the size of the vector. 
+                the .size() function returns the number of elements in the vector.
+                
+                
+
+        Example:
+        
+                        #include <iostream>
+                        #include <vector>
+
+                        int main() {
+  
+                         std::vector<std::string> grocery = {"Hot Pepper Jam", "Dragon Fruit", "Brussel Sprouts"};
+    
+                        // Add more 
+                         grocery.push_back("Tomato");
+                         grocery.push_back("Onion");
+                         grocery.push_back("Garlic");
+
+                        std::cout << grocery.size() << " ";
+
+  
+  ------------------
+  Operations
+  ------------------
+  
+  
+        - We can change each of the values within a vector using a for loop.
+        
+        
+ 
+        Example:
+        
+        
+                        #include <iostream>
+                #include <vector>
+  
+                int main() {
+  
+                 std::vector<double> delivery_order;
+  
+                  delivery_order.push_back(8.99);
+                  delivery_order.push_back(3.75);
+                  delivery_order.push_back(0.99);
+                  delivery_order.push_back(5.99);
+  
+                  // Calculate the total using a for loop:
+  
+                  double total = 0.0;
+  
+                  for (int i = 0; i < delivery_order.size(); i++ ){
 
 
+                  total = total + delivery_order[i];
+
+                 }
 
 
+                 std::cout << "total = " << total << " ";
+   
 
-
-
-
-
-
+  
+  
+                 }
+  
+  
+                
 
 
 
