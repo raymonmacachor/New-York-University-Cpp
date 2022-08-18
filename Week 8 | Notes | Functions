@@ -1,0 +1,218 @@
+--------------------------
+Functions
+--------------------------
+
+Function 
+
+        
+                - is a named group of code statements that accomplish something together, a bit like a factory machine.
+                
+
+--------------------------
+Built-in Functions
+--------------------------
+
+
+#include <cmath>
+
+                
+                - We gain the power to call math funtions.
+                
+
+Example:
+
+                        std::cout << sqrt(9) << "\n";
+                        
+                        //This would output 3
+
+
+Example 2:
+
+                
+                        #include <iostream>
+                        #include <cmath>
+
+                        int main() {
+  
+                          // This seeds the random number generator:
+                          srand (time(NULL));
+  
+                          // Use rand() below to initialize the_amazing_random_number
+                          int the_amazing_random_number = rand() % 29;
+
+                          std::cout << the_amazing_random_number;
+  
+                        }
+
+
+
+-----------------------
+Declare & Define
+-----------------------
+
+Declaration
+
+                - This includes the function's name, what the return type is, and any
+                parameters (if the function will accept input values, known as arguments).
+                
+                
+Definition
+
+                - Also known as the body of the function, this contains the instructions
+                for what the function is supposed to do.
+                
+                
+--------------------------------
+Void - The Point of No Return
+--------------------------------
+
+Void Function
+
+        
+                - is also known as a subroutine, has no return value, making it ideally
+                suited for situations where you just want to print stuff to the terminal.
+                
+
+Example:
+
+                        void animal_chat() {
+ 
+                         std::string fav, pet;
+ 
+                         std::cout << "What's your favorite animal?\n";
+                         std::cin >> fav;
+ 
+                         std::cout << "Do you have a " << fav << " as a pet? y/n\n";
+                         std::cin >> pet;
+ 
+                          if (pet == "y") {
+ 
+                            std::cout << "How lucky you have a " << fav << " as a pet!\n";
+ 
+                          } else {
+ 
+                            std::cout << "That's too bad.\n";
+ 
+                          }
+ 
+                        }
+
+
+Example 2:
+
+                        #include <iostream>
+
+                        // Define oscar_wilde_quote() below:
+                        void oscar_wilde_quote(){
+
+                          std::cout << "The highest, as the lowest, form of criticism is a mode of autobiography." << "\n";
+
+                        }
+
+                        int main() {
+  
+                          // Call your function here:
+                          oscar_wilde_quote();
+  
+                        }
+
+
+
+--------------------------------
+Return Types - Beyond the Void
+--------------------------------
+
+        
+                - A function can return most data types we've covered, including double, int,
+                bool, char, std::string, and std::vector.
+                
+                
+Example:
+
+
+                        std::string always_blue() {
+ 
+                          return "blue!\n";
+ 
+                        }
+
+
+-----------------------------
+How Return Values Work
+-----------------------------
+
+                
+                - There must be a value returned from the function.
+                
+                - The return value must be the same type as the function's
+                return type.
+                
+                
+Example:
+
+
+                std::string feed_the_cat() {
+ 
+                  return "Cat is fed!";
+ 
+                }
+
+
+
+                int main() {
+ 
+                  std::string cat_message = feed_the_cat();
+                  std::cout << cat_message;
+ 
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
