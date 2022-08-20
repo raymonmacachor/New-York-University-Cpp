@@ -238,6 +238,87 @@ Tackling Multiple Arguments
                 when you call the function. 
                 
                 
+Example:
+
+
+                        double get_tip(double price, double tip, bool total_included) {
+ 
+                          if (total_included) {
+
+                            return price * tip + price;
+
+                          } else {
+
+                            return price * tip;
+
+                          }
+
+                        }
+
+
+
+                        int main(){
+                        
+                        get_tip(45.50, 0.25, true);
+                        // this code results in 56.875, which you could round up to 56.88
+                                                
+                        }
+
+
+Example 2:
+
+
+                        #include <iostream>
+                        #include <string>
+
+                        // Define name_x_times() below:
+                        void name_x_times(std::string name, int x){
+
+                          while (x > 0){
+
+                            std::cout << name << "";
+                            x--;
+
+                          }
+
+                        }
+
+                        int main() {
+
+                          std::string my_name = "Raymon ";
+                          int some_number = 5; // Change this if you like!
+                          // Call name_x_times() below with my_name and some_number
+                          name_x_times(my_name, some_number);
+
+                        }
+
+
+--------------------------------
+How Parameters & Arguments Work
+--------------------------------
+
+
+                - The function call must include the same number of arguments as there are parameters.
+                
+                - The corresponding arguments must be passed in the same order. 
+                
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
