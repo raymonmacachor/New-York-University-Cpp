@@ -305,23 +305,134 @@ How Parameters & Arguments Work
                 
 
 
+----------------------------
+Scope and Flexibility
+----------------------------
+
+
+Scope
+
+                - is the region of code that can access or view a given element. 
+
+
+
+---------------------
+Multi-File Programs
+---------------------
+
+
+                - programs can grow quickly. With a few functions, you can declare the function
+                above main() and then you can define the function below main():
+
+
+
+                - To make your code cleaner and more modular, you can move the function definitions over to another
+                specialized.cpp file (e.g., my_functions.cpp) leaving a list of declarations above main().
+                
+                
+
+Example:
+
+                        
+                        ----------
+                        main.cpp
+                        ----------
+                        
+                        #include <iostream>
+                        #include <cmath>
+
+                        // Add declarations here:
+                        double average(double num1, double num2);
+                        int tenth_power(int num);
+                        bool is_palindrome(std::string text);
 
 
 
 
+                        int main() {
+
+                          std::cout << is_palindrome("racecar") << "\n";
+                          std::cout << tenth_power(3) << "\n";
+                          std::cout << average(8.0, 19.0) << "\n";
+
+                        }
 
 
 
+                        ----------------------
+                        my_functions.cpp
+                        ----------------------
+                        
+                        #include <iostream>
+                        #include <cmath>
+
+                        // Add definitions here:
+                        double average(double num1, double num2) {
+                          return (num1 + num2) / 2;
+                        }
+
+                        int tenth_power(int num) {
+                          return pow(num, 10);
+                        }
+
+                        bool is_palindrome(std::string text) {
+                          std::string reversed_text = "";
+
+                          for (int i = text.size() - 1; i >= 0; i--) {
+                            reversed_text += text[i];
+                          }
+
+                          if (reversed_text == text) {
+                            return true;
+                          }
+
+                          return false;
+                        }
+
+
+-----------------------------
+Getting a Header Yourself
+-----------------------------
+
+
+                - We can also take the function declarations and move them all over to a header file,
+                        another file usually with the same name as the file with all of the function definitions
+                        
+                        
+Example:
+                        
+                        Putting the .hpp file to the header as #include <name>.cpp
+
+                        #include "my_functions.hpp"
 
 
 
+----------------------------------
+How to get your Functions inline
+----------------------------------
 
 
+Inline Function
 
 
+                - is a function definition, usually in a header file, qualified by inline like this:
+                
+                
+Example:
 
+                        #this is used in hpp declaration.
+                        
+                        inline 
+                        void eat() {
 
+                          std::cout << "nom nom\n";
 
+                        }
+                        
+
+----------------------
+Default Arguments
+----------------------
 
 
 
