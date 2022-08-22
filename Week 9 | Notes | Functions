@@ -435,6 +435,82 @@ Default Arguments
 ----------------------
 
 
+Default Arguments
+
+
+                -are values assigned to parameters when the function is declared and defined.
+
+
+
+Example:
+
+
+                        // Declaration
+                        void intro(std::string name, std::string lang = "C++");
+
+                        // Definition
+                        void intro(std::string name, std::string lang) {
+                          std::cout << "Hi, my name is "
+                                    << name
+                                    << " and I'm learning "
+                                    << lang
+                                    << ".\n";
+                        }
+
+
+-------------------
+Function Overload
+-------------------
+
+                - you can give multiple C++ functions the same name. Just make sure at least
+                one of these conditions is true"
+                
+                        - Each has different type parameters.
+                        - Each has a different number of parameters. 
+
+
+Example:
+
+
+                        ---------
+                        main
+                        ---------
+                        void print_cat_ears(char let) {
+                          std::cout << " " << let << "   " << let << " " << "\n";
+                          std::cout << let << let << let << " " << let << let << let << "\n";
+                        }
+
+                        void print_cat_ears(int num) {
+                          std::cout << " " << num << "   " << num << " " << "\n";
+                          std::cout << num << num << num << " " << num << num << num << "\n";
+                        }
+
+
+
+                        ----------
+                        funtions
+                        ----------
+
+                        print_cat_ears('A');
+                        print_cat_ears(4);
+
+
+--------------------
+Function Templates
+--------------------
+
+
+Template
+
+                - is a C++ tool that allows programmers to add data types as parameters.
+                
+
+
+
+
+
+
+
 
 
 
